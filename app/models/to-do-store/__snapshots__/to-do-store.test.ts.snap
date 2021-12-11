@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToDoStore User can add a new Task to the TO-DO list 1`] = `
+Object {
+  "id": Any<String>,
+  "state": "🟢",
+  "task": "buy milk",
+}
+`;
+
+exports[`ToDoStore User can delete a Task from the TO-DO list 1`] = `
+Object {
+  "id": Any<String>,
+  "state": "❌",
+  "task": "buy milk",
+}
+`;
+
+exports[`ToDoStore User can get all Tasks from the TO-DO list for visualisation 1`] = `
+Object {
+  "id": Any<String>,
+  "state": "🟢",
+  "task": "buy milk",
+}
+`;
+
+exports[`ToDoStore User can get all Tasks from the TO-DO list for visualisation 2`] = `
+Object {
+  "id": Any<String>,
+  "state": "🟢",
+  "task": "feed the cat",
+}
+`;
+
+exports[`ToDoStore User can mark a Task in the TO-DO list as complete 1`] = `
+Object {
+  "id": Any<String>,
+  "state": "✅",
+  "task": "buy milk",
+}
+`;

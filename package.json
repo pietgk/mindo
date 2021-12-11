@@ -38,6 +38,7 @@
     "expo-linear-gradient": "^10.0.3",
     "expo-localization": "11.0.0",
     "i18n-js": "3.8.0",
+    "ksuid": "^3.0.0",
     "mobx": "6.1.8",
     "mobx-react-lite": "3.2.0",
     "mobx-state-tree": "5.0.1",
@@ -124,7 +125,7 @@
         "type": "ios.simulator",
         "device": {
           "name": "iPhone 11",
-          "os": "iOS 13.2"
+          "os": "iOS 15.0"
         }
       },
       "ios.sim.release": {
@@ -133,7 +134,7 @@
         "type": "ios.simulator",
         "device": {
           "name": "iPhone 11",
-          "os": "iOS 13.2"
+          "os": "iOS 15.0"
         }
       }
     }
