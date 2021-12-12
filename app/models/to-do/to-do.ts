@@ -21,8 +21,7 @@ export const ToDoModel = types
     task: types.optional(types.string, ""),
     state: types.optional(types.enumeration<ToDoState>(Object.values(ToDoState)), ToDoState.ACTIVE),
   })
-  // .views((self) => ({
-  // })) // eslint-disable-line @typescript-eslint/no-unused-vars
+  .views((self) => ({})) // eslint-disable-line @typescript-eslint/no-unused-vars
   .actions((self) => ({
     setName(v: string) {
       self.task = v

@@ -1,8 +1,9 @@
-import KSUID from "ksuid"
+// import KSUID from "ksuid" // RN issues :-(
+import uuid from 'react-native-uuid';
 import { Instance, SnapshotOut, types } from "mobx-state-tree"
-import { ToDoId, ToDoModel, ToDoState, withEnvironment } from ".."
-
-export const KSUid = () => KSUID.randomSync().string as Id;
+import { ToDoId, ToDoModel, ToDoState } from "../to-do/to-do"
+import { withEnvironment } from "../extensions/with-environment"
+export const KSUid = () => uuid.v4() as Id;
 export type Id = string;
 
 export const ToDoStoreModel = types
@@ -11,7 +12,7 @@ export const ToDoStoreModel = types
     todos: types.optional(types.map(ToDoModel), {}),
   })
   .extend(withEnvironment)
-  // .views((self) => ({}))
+  // .views((self) => ({}))   // eslint-disable-line @typescript-eslint/no-unused-vars
   .actions((self) => ({
     addToDo(task: string) {
       const id = KSUid()
