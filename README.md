@@ -1,4 +1,12 @@
-# Welcome to your new ignited app!
+# Welcome to the new ignited MinDo app!
+
+Please note this is 'discussion code' from a simple TO-DO spec.
+
+See tests for the spec.
+
+Also note that the originally generated code is left intact and is not part of the TO-DO
+
+## generated from ignite template
 
 [![CircleCI](https://circleci.com/gh/infinitered/ignite.svg?style=svg)](https://circleci.com/gh/infinitered/ignite)
 
