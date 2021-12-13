@@ -7255,6 +7255,344 @@ exports[`Storyshots TextField Style Overrides 1`] = `
 </View>
 `;
 
+exports[`Storyshots ToDo Style Presets 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+        "flex": 1,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView
+      keyboardShouldPersistTaps="handled"
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                Primary
+              </Text>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#666",
+                  "fontSize": 10,
+                  "paddingTop": 0,
+                }
+              }
+            >
+              The primary.
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#fff",
+                "padding": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  },
+                  Object {
+                    "backgroundColor": "#dd3333",
+                  },
+                ]
+              }
+            >
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Helvetica",
+                      "fontSize": 15,
+                    },
+                    Object {
+                      "color": "#FBA928",
+                      "fontFamily": "Helvetica",
+                      "fontSize": 14,
+                    },
+                  ]
+                }
+              >
+                🟢
+                 
+                buy milk
+              </Text>
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                nativeID="animatedComponent"
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#FBA928",
+                    "borderRadius": 4,
+                    "justifyContent": "center",
+                    "opacity": 1,
+                    "paddingHorizontal": 8,
+                    "paddingVertical": 8,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#ffffff",
+                        "fontFamily": "Helvetica",
+                        "fontSize": 15,
+                      },
+                      Array [
+                        Object {
+                          "color": "#ffffff",
+                          "fontSize": 9,
+                          "paddingHorizontal": 12,
+                        },
+                        undefined,
+                      ],
+                    ]
+                  }
+                >
+                  Delete
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
+exports[`Storyshots ToDoList Style Presets 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+        "flex": 1,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView
+      keyboardShouldPersistTaps="handled"
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                Primary
+              </Text>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#666",
+                  "fontSize": 10,
+                  "paddingTop": 0,
+                }
+              }
+            >
+              The primary.
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#fff",
+                "padding": 10,
+              }
+            }
+          >
+            <RCTScrollView
+              collapsable={false}
+              contentContainerStyle={
+                Array [
+                  Object {
+                    "paddingHorizontal": 16,
+                  },
+                  Object {
+                    "backgroundColor": "#dd3333",
+                  },
+                ]
+              }
+              data={Array []}
+              getItem={[Function]}
+              getItemCount={[Function]}
+              keyExtractor={[Function]}
+              onContentSizeChange={[Function]}
+              onGestureHandlerEvent={[Function]}
+              onGestureHandlerStateChange={[Function]}
+              onLayout={[Function]}
+              onMomentumScrollBegin={[Function]}
+              onMomentumScrollEnd={[Function]}
+              onScroll={[Function]}
+              onScrollBeginDrag={[Function]}
+              onScrollEndDrag={[Function]}
+              removeClippedSubviews={false}
+              renderItem={[Function]}
+              renderScrollComponent={[Function]}
+              scrollEventThrottle={50}
+              stickyHeaderIndices={Array []}
+              viewabilityConfigCallbackPairs={Array []}
+            >
+              <View />
+            </RCTScrollView>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
 exports[`Storyshots Wallpaper Style Presets 1`] = `
 <View
   onLayout={[Function]}

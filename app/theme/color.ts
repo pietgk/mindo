@@ -1,5 +1,9 @@
 import { palette } from "./palette"
+import { Appearance } from 'react-native'
 
+const darkMode = Appearance.getColorScheme() === 'dark'
+
+const colorScheme = (light: string, dark: string) => darkMode ? dark : light
 /**
  * Roles for colors.  Prefer using these over the palette.  It makes it easier
  * to change things.
@@ -23,7 +27,7 @@ export const color = {
   /**
    * The screen background.
    */
-  background: palette.white,
+  background: colorScheme(palette.white, palette.black),
   /**
    * The main tinting color.
    */

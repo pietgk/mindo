@@ -164,6 +164,14 @@ export const DemoScreen: FC<StackScreenProps<NavigatorParamList, "demo">> = obse
             />
             <Text style={HINT} tx={`demoScreen.${Platform.OS}ReactotronHint` as const} />
           </View>
+          <BulletItem text="TO-DO demo discussion code!" />
+          <Button
+            style={DEMO}
+            textStyle={DEMO_TEXT}
+            tx="demoScreen.todoList"
+            onPress={() => navigation.navigate("todoList")}
+          />
+          <BulletItem text="Character list." />
           <Button
             style={DEMO}
             textStyle={DEMO_TEXT}

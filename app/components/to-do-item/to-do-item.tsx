@@ -4,9 +4,12 @@ import { observer } from "mobx-react-lite"
 import { color, typography } from "../../theme"
 import { Text } from "../text/text"
 import { flatten } from "ramda"
+import { ToDo } from "../../models"
+import { Button } from ".."
 
 const CONTAINER: ViewStyle = {
-  justifyContent: "center",
+  flexDirection: "row",
+  justifyContent: "space-between",
 }
 
 const TEXT: TextStyle = {
@@ -15,23 +18,24 @@ const TEXT: TextStyle = {
   color: color.primary,
 }
 
-export interface ToDoProps {
-  /**
-   * An optional style override useful for padding & margin.
-   */
+export interface ToDoItemProps {
+  todo: ToDo,
   style?: StyleProp<ViewStyle>
 }
 
 /**
- * Describe your component here
+ * ToDo list item
  */
-export const ToDo = observer(function ToDo(props: ToDoProps) {
-  const { style } = props
+export const ToDoItem = observer(function ToDo(props: ToDoItemProps) {
+  const { style, todo } = props
   const styles = flatten([CONTAINER, style])
 
   return (
     <View style={styles}>
-      <Text style={TEXT}>Hello</Text>
+      <Text style={TEXT}>
+        {todo.state} {todo.task}
+      </Text>
+      <Button text="Delete" preset="command" onPress={() => todo.delete()} />
     </View>
   )
 })

@@ -28,7 +28,8 @@ export const ToDoModel = types
     },
     setState(v: ToDoState) {
       self.state = v
-    }
+    },
+    delete() { self.state = ToDoState.DELETED}
   }))
 
 type ToDoType = Instance<typeof ToDoModel>

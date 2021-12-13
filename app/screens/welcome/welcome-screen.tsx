@@ -96,19 +96,14 @@ export const WelcomeScreen: FC<StackScreenProps<NavigatorParamList, "welcome">> 
         <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
           <Header headerTx="welcomeScreen.poweredBy" style={HEADER} titleStyle={HEADER_TITLE} />
           <Text style={TITLE_WRAPPER}>
-            <Text style={TITLE} text="Your new app, " />
-            <Text style={ALMOST} text="almost" />
-            <Text style={TITLE} text="!" />
+            <Text style={TITLE} text="Piets MinDo app, " />
           </Text>
-          <Text style={TITLE} preset="header" tx="welcomeScreen.readyForLaunch" />
           <Image source={bowserLogo} style={BOWSER} />
           <Text style={CONTENT}>
-            This probably isn't what your app is going to look like. Unless your designer handed you
-            this screen and, in that case, congrats! You're ready to ship.
+            With Mindo code to enable interview discussions.
           </Text>
           <Text style={CONTENT}>
-            For everyone else, this is where you'll see a live preview of your fully functioning app
-            using Ignite.
+            See to-do tests, models, screens & components 
           </Text>
         </Screen>
         <SafeAreaView style={FOOTER}>

@@ -14,10 +14,11 @@
   },
   "demoScreen": {
     "howTo": "HOW TO",
-    "title": "What’s In This Stack?",
-    "tagLine": "Congratulations, you’ve got a very advanced React Native app template here.  Take advantage of this boilerplate!",
+    "title": "What’s used in the Stack?",
+    "tagLine": "MinDo uses the React-native mobx-state-tree based Infinite-Red Ignite boilerplate!",
     "reactotron": "Demo Reactotron",
     "demoList": "Demo List",
+    "todoList": "ToDo List",
     "androidReactotronHint": "If this doesn't work, ensure the Reactotron desktop app is running, run adb reverse tcp:9090 tcp:9090 from your terminal, and reload the app.",
     "iosReactotronHint": "If this doesn't work, ensure the Reactotron desktop app is running and reload app.",
     "macosReactotronHint": "If this doesn't work, ensure the Reactotron desktop app is running and reload app.",
@@ -26,6 +27,11 @@
   },
   "demoListScreen": {
     "title": "Demo List"
+  },
+  "todoScreen": {
+    "title": "To-do list",
+    "prompt": "",
+    "placeholder": "new TO-DO"
   },
   "errorScreen": {
     "title": "Something went wrong!",

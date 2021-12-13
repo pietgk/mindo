@@ -1,37 +1,29 @@
-import * as React from "react"
-import { StyleProp, TextStyle, View, ViewStyle } from "react-native"
+import React from "react"
+import { StyleProp, ViewStyle } from "react-native"
 import { observer } from "mobx-react-lite"
-import { color, typography } from "../../theme"
-import { Text } from "../text/text"
+import { spacing } from "../../theme"
 import { flatten } from "ramda"
+import { useStores } from "../../models"
+import { FlatList } from "react-native-gesture-handler"
+import { ToDoItem } from ".."
 
-const CONTAINER: ViewStyle = {
-  justifyContent: "center",
+const FLAT_LIST: ViewStyle = {
+  paddingHorizontal: spacing[4],
 }
-
-const TEXT: TextStyle = {
-  fontFamily: typography.primary,
-  fontSize: 14,
-  color: color.primary,
-}
-
 export interface ToDoListProps {
-  /**
-   * An optional style override useful for padding & margin.
-   */
   style?: StyleProp<ViewStyle>
 }
 
-/**
- * Describe your component here
- */
 export const ToDoList = observer(function ToDoList(props: ToDoListProps) {
-  const { style } = props
-  const styles = flatten([CONTAINER, style])
+  const todoArray = [...useStores().todoStore?.todos?.values()??[]]
+  const styles = flatten([FLAT_LIST, props.style])
 
   return (
-    <View style={styles}>
-      <Text style={TEXT}>Hello</Text>
-    </View>
+    <FlatList
+      contentContainerStyle={styles}
+      data={todoArray}
+      keyExtractor={(item) => String(item.id)}
+      renderItem={({item}) => (<ToDoItem todo={item} />)}
+    />
   )
 })

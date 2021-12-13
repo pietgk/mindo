@@ -27,6 +27,7 @@ export const viewPresets: Record<string, ViewStyle> = {
    */
   primary: { ...BASE_VIEW, backgroundColor: color.palette.orange } as ViewStyle,
 
+  command: { ...BASE_VIEW, backgroundColor: color.palette.orange } as ViewStyle,
   /**
    * A button without extras.
    */
