@@ -1,7 +1,7 @@
 import * as React from "react"
 import { StyleProp, TextStyle, View, ViewStyle } from "react-native"
 import { observer } from "mobx-react-lite"
-import { color, typography } from "../../theme"
+import { color, spacing, typography } from "../../theme"
 import { Text } from "../text/text"
 import { flatten } from "ramda"
 import { ToDo } from "../../models"
@@ -10,6 +10,15 @@ import { Button } from ".."
 const CONTAINER: ViewStyle = {
   flexDirection: "row",
   justifyContent: "space-between",
+  marginBottom: spacing[1],
+}
+
+const BUTTONS: ViewStyle = {
+  flexDirection: "row",
+}
+
+const BUTTON: ViewStyle = {
+  marginLeft: spacing[1],
 }
 
 const TEXT: TextStyle = {
@@ -19,12 +28,13 @@ const TEXT: TextStyle = {
 }
 
 export interface ToDoItemProps {
-  todo: ToDo,
+  todo: ToDo
   style?: StyleProp<ViewStyle>
 }
 
 /**
  * ToDo list item
+ * TODO text => input
  */
 export const ToDoItem = observer(function ToDo(props: ToDoItemProps) {
   const { style, todo } = props
@@ -35,7 +45,10 @@ export const ToDoItem = observer(function ToDo(props: ToDoItemProps) {
       <Text style={TEXT}>
         {todo.state} {todo.task}
       </Text>
-      <Button text="Delete" preset="command" onPress={() => todo.delete()} />
+      <View style={BUTTONS}>
+        <Button style={BUTTON} text="Complete" preset="command" onPress={() => todo.complete()} />
+        <Button style={BUTTON} text="Delete" preset="command" onPress={() => todo.delete()} />
+      </View>
     </View>
   )
 })
