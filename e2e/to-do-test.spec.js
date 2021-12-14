@@ -10,6 +10,6 @@ describe("ToDo", () => {
 
   it("should go to next screen after tap", async () => {
     await element(by.id("next-screen-button")).tap()
-    await expect(element(by.text("ToDo List"))).tap()
+    await element(by.text("ToDo List")).tap()
   })
 })

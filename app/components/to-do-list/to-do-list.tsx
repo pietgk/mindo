@@ -1,11 +1,11 @@
 import React from "react"
-import { StyleProp, ViewStyle } from "react-native"
+import { StyleProp, ViewStyle, FlatList } from "react-native"
 import { observer } from "mobx-react-lite"
 import { spacing } from "../../theme"
 import { flatten } from "ramda"
 import { useStores } from "../../models"
-import { FlatList } from "react-native-gesture-handler"
 import { ToDoItem } from ".."
+import AppleStyleSwipeableRow from "././apple-style-swipable-row"
 
 const FLAT_LIST: ViewStyle = {
   paddingHorizontal: spacing[4],
@@ -15,7 +15,7 @@ export interface ToDoListProps {
 }
 
 export const ToDoList = observer(function ToDoList(props: ToDoListProps) {
-  const todoArray = [...useStores().todoStore?.todos?.values()??[]]
+  const todoArray = [...(useStores().todoStore?.todos?.values() ?? [])]
   const styles = flatten([FLAT_LIST, props.style])
 
   return (
@@ -23,7 +23,11 @@ export const ToDoList = observer(function ToDoList(props: ToDoListProps) {
       contentContainerStyle={styles}
       data={todoArray}
       keyExtractor={(item) => String(item.id)}
-      renderItem={({item}) => (<ToDoItem todo={item} />)}
+      renderItem={({ item }) => (
+        <AppleStyleSwipeableRow>
+          <ToDoItem todo={item} />
+        </AppleStyleSwipeableRow>
+      )}
     />
   )
 })

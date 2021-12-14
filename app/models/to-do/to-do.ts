@@ -7,7 +7,7 @@ export enum ToDoState {
 }
 
 /**
- * ToDo is identified by a string
+ * a ToDo is identified by a string id
  */
 export type ToDoId = string
 
@@ -23,7 +23,7 @@ export const ToDoModel = types
   })
   .views((self) => ({})) // eslint-disable-line @typescript-eslint/no-unused-vars
   .actions((self) => ({
-    setName(v: string) {
+    setTask(v: string) {
       self.task = v
     },
     setState(v: ToDoState) {

@@ -49,12 +49,6 @@ const TITLE: TextStyle = {
   lineHeight: 38,
   textAlign: "center",
 }
-const ALMOST: TextStyle = {
-  ...TEXT,
-  ...BOLD,
-  fontSize: 26,
-  fontStyle: "italic",
-}
 const BOWSER: ImageStyle = {
   alignSelf: "center",
   marginVertical: spacing[5],

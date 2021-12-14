@@ -5,12 +5,10 @@ import {
   View,
   ViewStyle,
 } from "react-native"
-import { Header, GradientBackground, Screen, TextField, ToDoList } from "../../components"
+import { Header, GradientBackground, Screen, ToDoList, ToDoInput } from "../../components"
 import { color, spacing } from "../../theme"
-import { useStores } from "../../models"
 import { StackScreenProps } from "@react-navigation/stack"
 import { NavigatorParamList } from "../../navigators"
-import { State } from "react-powerplug"
 
 const FULL: ViewStyle = {
   flex: 1,
@@ -32,22 +30,17 @@ const HEADER_TITLE: TextStyle = {
 }
 const INPUT_CONTAINER: ViewStyle = {
   padding: 8,
-  marginBottom: 4,
-  backgroundColor: color.transparent,
-}
-const INPUT: TextStyle = {
   borderColor: color.text,
-  backgroundColor: color.transparent,
+  borderRadius: 24,
   borderWidth: 1,
-  padding: 8,
-  borderRadius: 20,
-  // color: color.primaryDarker
+  marginHorizontal: 4,
+  marginBottom: 16,
+  backgroundColor: color.transparent,
 }
 
 export const ToDoScreen: FC<StackScreenProps<NavigatorParamList, "demoList">> = observer(
   ({ navigation }) => {
     const goBack = () => navigation.goBack()
-    const { todoStore } = useStores()
 
     return (
       <View testID="ToDoListScreen" style={FULL}>
@@ -61,19 +54,7 @@ export const ToDoScreen: FC<StackScreenProps<NavigatorParamList, "demoList">> = 
             titleStyle={HEADER_TITLE}
           />
           <ToDoList />
-          <State initial={{ value: "" }}>
-            {({ state, setState }) => (
-              <TextField
-                style={INPUT_CONTAINER}
-                inputStyle={INPUT}
-                onEndEditing={() => state.value.length > 0 && todoStore.addToDo(state.value)}
-                onChangeText={(value) => setState({ value })}
-                value={state.value}
-                placeholderTx="todoScreen.placeholder"
-                labelTx="todoScreen.prompt"
-              />
-            )}
-          </State>
+          <ToDoInput style={INPUT_CONTAINER} />
         </Screen>
       </View>
     )
